@@ -7,7 +7,7 @@ import classNames from "classnames";
 import { List, ListItem, withStyles } from "@material-ui/core";
 
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
+// import Favorite from "@material-ui/icons/Favorite";
 
 import footerStyle from "assets/jss/material-kit-react/components/footerStyle.jsx";
 
@@ -28,14 +28,14 @@ function Footer({ ...props }) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/"
+                href="https://github.com/kiacone/ren_dev_ous/"
                 className={classes.block}
                 target="_blank"
               >
-                Creative Tim
+                Visit the Repo
               </a>
             </ListItem>
-            <ListItem className={classes.inlineBlock}>
+            {/* <ListItem className={classes.inlineBlock}>
               <a
                 href="https://www.creative-tim.com/presentation"
                 className={classes.block}
@@ -61,20 +61,11 @@ function Footer({ ...props }) {
               >
                 Licenses
               </a>
-            </ListItem>
+            </ListItem> */}
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
-          <a
-            href="https://www.creative-tim.com"
-            className={aClasses}
-            target="_blank"
-          >
-            Creative Tim
-          </a>{" "}
-          for a better web.
+          &copy; {1900 + new Date().getYear()}, A project for the University of Richmond: Full-stack Developer Program
         </div>
       </div>
     </footer>
