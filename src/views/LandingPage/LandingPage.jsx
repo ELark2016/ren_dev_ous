@@ -95,7 +95,8 @@ class LandingPage extends React.Component {
                   <form className={classes.form}>
                     <CardHeader color="primary" className={classes.cardHeader}>
                       <h4>Login</h4>
-                      <div className={classes.socialLine}>
+                      {/* Below for future Social oAuth Sign-in */}
+                      {/* <div className={classes.socialLine}>
                         <Button
                           justIcon
                           href="#pablo"
@@ -123,11 +124,11 @@ class LandingPage extends React.Component {
                         >
                           <i className={"fab fa-google-plus-g"} />
                         </Button>
-                      </div>
+                      </div> */}
                     </CardHeader>
-                    <p className={classes.divider}>Or Sign up!</p>
+                    <p className={classes.divider}><a href="/sign-up">Or Sign up here!</a></p>
                     <CardBody>
-                      <CustomInput
+                      {/* <CustomInput
                         labelText="First Name..."
                         id="first"
                         formControlProps={{
@@ -141,7 +142,7 @@ class LandingPage extends React.Component {
                             </InputAdornment>
                           )
                         }}
-                      />
+                      /> */}
                       <CustomInput
                         labelText="Email..."
                         id="email"
@@ -177,7 +178,7 @@ class LandingPage extends React.Component {
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
                       <Button simple color="primary" size="lg">
-                        Get started
+                        Sign in
                       </Button>
                     </CardFooter>
                   </form>
