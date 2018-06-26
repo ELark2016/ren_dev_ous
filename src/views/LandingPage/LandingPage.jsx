@@ -81,7 +81,7 @@ class LandingPage extends React.Component {
                 <h1 className={classes.title}>The landing page for Devs.</h1>
                 <br />
                 <Button
-                  color="success"
+                  color="primary"
                   size="lg"
                   href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                   target="_blank"
@@ -93,7 +93,7 @@ class LandingPage extends React.Component {
               <GridItem xs={12} sm={12} md={4}>
                 <Card className={classes[this.state.cardAnimaton]}>
                   <form className={classes.form}>
-                    <CardHeader color="success" className={classes.cardHeader}>
+                    <CardHeader color="primary" className={classes.cardHeader}>
                       <h4>Login</h4>
                       <div className={classes.socialLine}>
                         <Button
@@ -125,7 +125,7 @@ class LandingPage extends React.Component {
                         </Button>
                       </div>
                     </CardHeader>
-                    <p className={classes.divider}>Or Be Classical</p>
+                    <p className={classes.divider}>Or Sign up!</p>
                     <CardBody>
                       <CustomInput
                         labelText="First Name..."
