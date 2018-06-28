@@ -17,7 +17,8 @@ import Button from "components/CustomButtons/Button.jsx";
 import InputAdornment from "@material-ui/core/styles/withStyles";
 import Email from "@material-ui/icons/Email";
 import LockOutline from "@material-ui/icons/LockOutline";
-import People from "@material-ui/icons/People";
+// Unused as login
+// import People from "@material-ui/icons/People";
 import Card from "components/Card/Card.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";

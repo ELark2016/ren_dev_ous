@@ -65,8 +65,9 @@ class LoginPage extends React.Component {
                 <Card className={classes[this.state.cardAnimaton]}>
                   <form className={classes.form}>
                     <CardHeader color="primary" className={classes.cardHeader}>
-                      <h4>Login</h4>
-                      <div className={classes.socialLine}>
+                      <h4>Sign Up</h4>
+                      {/* Below section can be added if we get oAuth working */}
+                      {/* <div className={classes.socialLine}>
                         <Button
                           justIcon
                           href="#pablo"
@@ -94,9 +95,9 @@ class LoginPage extends React.Component {
                         >
                           <i className={"fab fa-google-plus-g"} />
                         </Button>
-                      </div>
+                      </div> */}
                     </CardHeader>
-                    <p className={classes.divider}>Or Be Classical</p>
+                    {/* <p className={classes.divider}>Or Be Classical</p> */}
                     <CardBody>
                       <CustomInput
                         labelText="First Name..."
