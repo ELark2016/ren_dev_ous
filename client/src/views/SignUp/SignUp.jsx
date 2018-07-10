@@ -7,23 +7,23 @@ import Email from "@material-ui/icons/Email";
 import LockOutline from "@material-ui/icons/LockOutline";
 import People from "@material-ui/icons/People";
 // core components
-import Header from "components/Header/Header.jsx";
-import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import Footer from "components/Footer/Footer.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardHeader from "components/Card/CardHeader.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
+import Header from "../../components/Header/Header.jsx";
+import HeaderLinks from "../../components/Header/HeaderLinks.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
+import GridContainer from "../../components/Grid/GridContainer.jsx";
+import GridItem from "../../components/Grid/GridItem.jsx";
+import Button from "../../components/CustomButtons/Button.jsx";
+import Card from "../../components/Card/Card.jsx";
+import CardBody from "../../components/Card/CardBody.jsx";
+import CardHeader from "../../components/Card/CardHeader.jsx";
+import CardFooter from "../../components/Card/CardFooter.jsx";
+import CustomInput from "../../components/CustomInput/CustomInput.jsx";
 
-import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
+import signUpStyle from "../../assets/jss/material-kit-react/views/signUp.jsx";
 
-import image from "assets/img/bg7.jpg";
+import image from "../../assets/img/devSetup.jpeg";
 
-class LoginPage extends React.Component {
+class SignUp extends React.Component {
   constructor(props) {
     super(props);
     // we use this to make the card to appear after the page has been rendered
@@ -47,7 +47,7 @@ class LoginPage extends React.Component {
         <Header
           absolute
           color="transparent"
-          brand="Material Kit React"
+          brand="ren<dev>ous"
           rightLinks={<HeaderLinks />}
           {...rest}
         />
@@ -65,8 +65,9 @@ class LoginPage extends React.Component {
                 <Card className={classes[this.state.cardAnimaton]}>
                   <form className={classes.form}>
                     <CardHeader color="primary" className={classes.cardHeader}>
-                      <h4>Login</h4>
-                      <div className={classes.socialLine}>
+                      <h4>Sign Up</h4>
+                      {/* Below section can be added if we get oAuth working */}
+                      {/* <div className={classes.socialLine}>
                         <Button
                           justIcon
                           href="#pablo"
@@ -94,9 +95,9 @@ class LoginPage extends React.Component {
                         >
                           <i className={"fab fa-google-plus-g"} />
                         </Button>
-                      </div>
+                      </div> */}
                     </CardHeader>
-                    <p className={classes.divider}>Or Be Classical</p>
+                    {/* <p className={classes.divider}>Or Be Classical</p> */}
                     <CardBody>
                       <CustomInput
                         labelText="First Name..."
@@ -163,4 +164,4 @@ class LoginPage extends React.Component {
   }
 }
 
-export default withStyles(loginPageStyle)(LoginPage);
+export default withStyles(signUpStyle)(SignUp);

@@ -15,9 +15,9 @@ import Grow from "@material-ui/core/Grow";
 import Divider from "@material-ui/core/Divider";
 
 // core components
-import Button from "components/CustomButtons/Button.jsx";
+import Button from "../CustomButtons/Button.jsx";
 
-import customDropdownStyle from "assets/jss/material-kit-react/components/customDropdownStyle.jsx";
+import customDropdownStyle from "../../assets/jss/material-kit-react/components/customDropdownStyle.jsx";
 
 class CustomDropdown extends React.Component {
   constructor(props) {

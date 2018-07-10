@@ -7,11 +7,11 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 
 // core components
-import Header from "components/Header/Header.jsx";
-import Footer from "components/Footer/Footer.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import Header from "../../components/Header/Header.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
+import GridContainer from "../../components/Grid/GridContainer.jsx";
+import GridItem from "../../components/Grid/GridItem.jsx";
+import Button from "../../components/CustomButtons/Button.jsx";
 
 // Added imports for login card
 import InputAdornment from "@material-ui/core/styles/withStyles";
@@ -19,17 +19,17 @@ import Email from "@material-ui/icons/Email";
 import LockOutline from "@material-ui/icons/LockOutline";
 // Unused as login
 // import People from "@material-ui/icons/People";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardHeader from "components/Card/CardHeader.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
-import CustomInput from "components/CustomInput/CustomInput.jsx";
+import Card from "../../components/Card/Card.jsx";
+import CardBody from "../../components/Card/CardBody.jsx";
+import CardHeader from "../../components/Card/CardHeader.jsx";
+import CardFooter from "../../components/Card/CardFooter.jsx";
+import CustomInput from "../../components/CustomInput/CustomInput.jsx";
 //***************************************************************
 
 // import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import Parallax from "components/Parallax/Parallax.jsx";
+import Parallax from "../../components/Parallax/Parallax.jsx";
 
-import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx";
+import landingPageStyle from "../../assets/jss/material-kit-react/views/landingPage.jsx";
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.jsx";
@@ -75,7 +75,7 @@ class LandingPage extends React.Component {
           }}
           {...rest}
         />
-        <Parallax filter image={require("assets/img/devScreen3.jpeg")}>
+        <Parallax filter image={require("../../assets/img/devScreen3.jpeg")}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={8}>

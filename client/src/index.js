@@ -1,11 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// import "./index.css";
+
+// Material Kit
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router";
 
-import indexRoutes from "routes/index.jsx";
+import indexRoutes from "./routes/index.jsx";
 
-import "./assets/scss/material-kit-react.css?v=1.1.0";
+// CSS
+import "./assets/jss/scss/material-kit-react.css";
+
+// *****************
+
+// import App from "./App";
+import registerServiceWorker from "./registerServiceWorker";
 
 var hist = createBrowserHistory();
 
@@ -19,3 +28,5 @@ ReactDOM.render(
   </Router>,
   document.getElementById("root")
 );
+
+registerServiceWorker();
