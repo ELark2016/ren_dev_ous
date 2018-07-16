@@ -21,6 +21,7 @@ import Button from "../../components/CustomButtons/Button.jsx";
 // import HeaderLinks from "../../components/Header/HeaderLinks.jsx";
 import Parallax from "../../components/Parallax/Parallax.jsx";
 // UI Kit core components for Signup Form
+import InputAdornment from "@material-ui/core/InputAdornment";
 import Card from "../../components/Card/Card.jsx";
 import CardBody from "../../components/Card/CardBody.jsx";
 import CardHeader from "../../components/Card/CardHeader.jsx";
@@ -166,6 +167,8 @@ class Home extends Component {
       signUpError,
     } = this.state;
 
+    const { classes, ...rest } = this.props;
+
     if (isLoading) {
       return (<div><p>Loading...</p></div>)
     }
@@ -206,43 +209,103 @@ class Home extends Component {
               {/* FIXME: Update Sign up form to UI Kit */}
               {/* ************************************ */}
               <GridItem xs={12} sm={12} md={4}>
-                <div className="card grey darken-1">
-                  <div className="card-content white-text">
-                    {
-                      (signUpError) ? (
-                        <p>{signUpError}</p>
-                      ) : (null)
-                    }
-                    <span className="card-title">Sign Up!</span>
-                    <input
-                    type="text"
-                    placeholder="First Name"
-                    value={signUpFirstName}
-                    onChange={this.onTextBoxChangeSignUpFirstName} />
-                    <br /><br />
-                    <input
-                    type="text"
-                    placeholder="Last Name"
-                    value={signUpLastName}
-                    onChange={this.onTextBoxChangeSignUpLastName} />
-                    <br /><br />
-                    <input
-                    type="email"
-                    placeholder="Email"
-                    value={signUpEmail}
-                    onChange={this.onTextBoxChangeSignUpEmail} />
-                    <br /><br />
-                    <input
-                    type="password"
-                    placeholder="Password"
-                    value={signUpPassword}
-                    onChange={this.onTextBoxChangeSignUpPassword} />
-                    <br /><br />
-                    <button className='btn' color="#ff1744" onClick={this.onSignUp}>Sign Up
-                      <i class="material-icons right">send</i>
-                    </button>
-                  </div>
-                </div>
+                <Card>
+                  <form className="form">
+                  <CardHeader color="primary" className={classes.cardHeader}>
+                    <h3>Sign Up!</h3>
+                  </CardHeader>
+                    
+                  <CardBody>
+                    <CustomInput
+                      labelText="First Name..."
+                      id="first"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "text",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <People className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Email..."
+                      id="email"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "email",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <Email className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Password"
+                      id="pass"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        type: "password",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <LockOutline
+                              className={classes.inputIconsColor}
+                            />
+                          </InputAdornment>
+                        )
+                      }}
+                    />
+                  </CardBody>
+                  <CardFooter className={classes.cardFooter}>
+                    <Button simple color="primary" size="lg">
+                      Get started
+                    </Button>
+                  </CardFooter>
+                    {/* <div className="card-content white-text">
+                      {
+                        (signUpError) ? (
+                          <p>{signUpError}</p>
+                        ) : (null)
+                      }
+                      <span className="card-title">Sign Up!</span>
+                      <input
+                      type="text"
+                      placeholder="First Name"
+                      value={signUpFirstName}
+                      onChange={this.onTextBoxChangeSignUpFirstName} />
+                      <br /><br />
+                      <input
+                      type="text"
+                      placeholder="Last Name"
+                      value={signUpLastName}
+                      onChange={this.onTextBoxChangeSignUpLastName} />
+                      <br /><br />
+                      <input
+                      type="email"
+                      placeholder="Email"
+                      value={signUpEmail}
+                      onChange={this.onTextBoxChangeSignUpEmail} />
+                      <br /><br />
+                      <input
+                      type="password"
+                      placeholder="Password"
+                      value={signUpPassword}
+                      onChange={this.onTextBoxChangeSignUpPassword} />
+                      <br /><br />
+                      <button className='btn' color="#ff1744" onClick={this.onSignUp}>Sign Up
+                        <i class="material-icons right">send</i>
+                      </button>
+                    </div> */}
+                  </form>
+                </Card>
               </GridItem>
 
             </GridContainer>
